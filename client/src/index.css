@@ -66,13 +66,17 @@ body {
   color: white;
 }
 
+.saved-list-buttons {
+  display: flex;
+}
+
 .home-button {
   padding: 5px 10px;
   background-color: lightskyblue;
+  margin-right: 1rem;
 }
 
 .clear-button {
   padding: 5px 10px;
   background-color: lightcoral;
-  margin-top: 1rem;
 }
