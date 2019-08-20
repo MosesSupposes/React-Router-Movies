@@ -10,31 +10,30 @@ const MovieCard = (props) => {
 
   return (
     <div className="save-wrapper">
-      <Link to={`/movies/${id}`}>
-        <div className="movie-card">
+      
+      <div className="movie-card">
+        <Link to={`/movies/${id}`}>
           <h2>{title}</h2>
-          <div className="movie-director">
-            Director: <em>{director}</em>
-          </div>
-          <div className="movie-metascore">
-            Metascore: <strong>{metascore}</strong>
-          </div>
-          <h3>Actors</h3>
-            {(!stars)
-              ? <div>Loading Stars...</div> 
-              : stars.map(star => (
-                <div key={star} className="movie-star">
-                  {star}
-                </div>
-            ))}      
+        </Link>
+        
+        <div className="movie-director">
+          Director: <em>{director}</em>
         </div>
-        <div 
-          className="save-button" 
-          onClick={() => saveMovie(props.movie)}
-        >
-          Save
+        
+        <div className="movie-metascore">
+          Metascore: <strong>{metascore}</strong>
         </div>
-      </Link>
+
+        <h3>Actors</h3>
+          {(!stars)
+            ? <div>Loading Stars...</div> 
+            : stars.map(star => (
+              <div key={star} className="movie-star">
+                {star}
+              </div>
+          ))}      
+      </div>
+      <div className="save-button" onClick={() => saveMovie(props.movie)}>Save</div>
     </div>
   );
 };
