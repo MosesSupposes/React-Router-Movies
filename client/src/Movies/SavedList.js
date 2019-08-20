@@ -9,6 +9,7 @@ const SavedList = props => (
     ))}
     <Link to="/">
       <div className="home-button">Home</div>
+      <div className="clear-button" onClick={props.clearSavedList}>Clear</div>
     </Link>
   </div>
 );
