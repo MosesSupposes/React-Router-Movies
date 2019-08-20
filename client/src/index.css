@@ -70,3 +70,9 @@ body {
   padding: 5px 10px;
   background-color: lightskyblue;
 }
+
+.clear-button {
+  padding: 5px 10px;
+  background-color: lightcoral;
+  margin-top: 1rem;
+}
